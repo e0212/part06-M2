@@ -1,6 +1,13 @@
-(function () {
+// con IIFE (RECORDAR AGREGAR LA FUNCION ANONIMA)
+  //window.whiteboard = new window.EventEmitter(); IIFE
 
-  window.whiteboard = new window.EventEmitter();
+  // sintaxis Common js
+ //  const EventEmitter = require('./event-emitter.js'); // importo lo que viene de event-emmitter.js
+  // const whiteboard = new EventEmitter();
+
+  // ES6
+ import EventEmitter from "./event-emitter";
+ const whiteboard = new EventEmitter();
 
   // Ultimately, the color of our stroke;
   var color;
@@ -112,5 +119,12 @@
     }
 
   };
+// NO TOCAR NADA DE ACA PARA ABAJO
 
-})();
+//  Common js
+ // module.exports = whiteboard;
+
+ // ES6
+ export default whiteboard;
+
+

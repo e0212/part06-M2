@@ -1,8 +1,7 @@
-(function () {
+// con IIFE (RECORDAR AGREGAR LA FUNCION ANONIMA)
+// window.EventEmitter = EventEmitter;
 
-  window.EventEmitter = EventEmitter;
-
-  // our EventEmitter constructor function
+// our EventEmitter constructor function
   function EventEmitter () {
     this.subscribers = {};
   }
@@ -42,5 +41,10 @@
     });
 
   };
+// NO TOCAR NADA DE ACA PARA ABAJO
 
-})();
+// con sintaxis de common js
+// module.exports = EventEmitter;
+
+// con sintaxis ES6
+export default EventEmitter;

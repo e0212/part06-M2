@@ -1,7 +1,16 @@
-(function () {
+  // con IIFE (RECORDAR AGREGAR LA FUNCION ANONIMA)
+  //var whiteboard = window.whiteboard;
+ // var socket = window.io(window.location.origin);
 
-  var whiteboard = window.whiteboard;
-  var socket = window.io(window.location.origin);
+ // Common js
+ //const whiteboard = require('./whiteboard.js');
+ //const io = require('socket.io-client');
+ //const socket = io(window.location.origin); // path
+
+ // ES6
+ import whiteboard from './whiteboard.js';
+ import io from 'socket.io-client';
+ const socket = io(window.location.origin); // path
 
   socket.on('connect', function () {
     console.log('Connected!');
@@ -26,4 +35,4 @@
     socket.emit('draw', start, end, color);
   });
 
-})();
+
