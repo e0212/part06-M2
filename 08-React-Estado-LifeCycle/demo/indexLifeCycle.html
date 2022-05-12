@@ -13,7 +13,7 @@
   <script type="text/babel">
   
   class Numero extends React.Component {
-    constructor(props) {
+    constructor(props) { // Paso 1 se ejecuta el constructor
       super(props);
       this.listRef = React.createRef();
   }
@@ -22,7 +22,7 @@
       console.log('Mouse move');
     }
 
-    componentDidMount() {
+    componentDidMount() { // Paso 3 || se ejecuta solo despues del primer renderizado
       console.log('Estoy en el DOM');
       console.log(document.querySelector('#numero'));
       document.title = this.props.numero;
@@ -30,13 +30,13 @@
     }
 
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps, prevState) { // Paso 5...
       console.log('Ya me actualicé:', prevProps);
       console.log(document.querySelector('#numero').innerText);
       document.title = this.props.numero;
     }
 
-    componentWillUnmount() {
+    componentWillUnmount() { // se ejecuta cuando un componente se desmonta
       console.log('adios!!');
       console.log(document.querySelector('#numero'));
       window.removeEventListener('mousemove', this.onMove);
@@ -50,7 +50,7 @@
       }
     }
     
-    render() {
+    render() { // Paso 2 || Paso 4 se ejecuta otra vez
       console.log('renderié!');
       return (
         <div id="numero">

@@ -18,30 +18,32 @@
    constructor(props) {
      super(props);
      this.state = {
-       contador: this.props.contador
+       contador: this.props.contador // 0 inicial con cada onClick se incrementa 0+1+1+1...
       }
-      this.variable = this.props.contador
+      this.variable = this.props.contador // 0 inicial
       this.incrementoContador= this.incrementoContador.bind(this);
     }
     
     onButtonClick = () => {
       this.setState((state) => {
-          return {contador: state.contador + 1}
+          return {contador: state.contador + 1} 
+    // return {variable: state.contador + 1} // modifico - no funciona que se actualice el boton de abajo
      });
       console.log("Actualicé mi state :", this.state.contador)
     }
     
     incrementoContador(cuento) {
      this.variable++
+    // return {contador: state.variable + 1} modifico - no funciona
       console.log("Soy contador ", this.variable)
     }
-    
+               // &nbsp = non breaking space
     render(){
       return (
         <div>          
           <h1>State vs Variable Contador</h1>
           <div><button onClick={this.onButtonClick}>Suma uno!</button>
-            &nbsp;Hola, soy el State {this.state.contador}!!
+            &nbsp;Hola, soy el State {this.state.contador}!! 
             </div>
             <div>
             <p>Variable contador: {this.variable}</p>

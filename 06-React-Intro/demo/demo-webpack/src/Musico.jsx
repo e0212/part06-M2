@@ -1,5 +1,5 @@
 import React from 'react';
-
+// componente presentacional - recibe props y las muestra nada mas
 function Musico({ name, lastname, band }) {
   return (
     <div>

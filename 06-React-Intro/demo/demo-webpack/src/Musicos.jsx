@@ -1,6 +1,6 @@
 import React from 'react';
 import Musico from './Musico.jsx';
-
+// es el container de musico
 export default function Musicos({ musicos }) {
     return (
       <div>

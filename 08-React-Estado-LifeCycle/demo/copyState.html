@@ -11,25 +11,25 @@
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
-
-    class Children extends React.Component {
-      constructor(props) {
-        super(props);
-        this.state = {
-          title: this.props.title
-        };
-      }
-
+  // METER ESTADOS DONDE NO HACE FALTA
+    class Children extends React.Component { // el padre le pasa props. No necesita modificar nada, solo las muestra.
+      //constructor(props) {
+      //  super(props);      muestra Henry por el title del padre
+       // this.state = {
+       //   title: this.props.title
+        //};
+      //}
+                // en RENDER CAMBIO state por props para comentar lo de arriba y funcione
       render(){
         return (
           <div>
-            <h2>{this.state.title}</h2>
+            <h2>{this.props.title}</h2>
           </div>
         )
       }
     };
 
-  class App extends React.Component {
+  class App extends React.Component { // Padre
     constructor(props) {
       super(props);
       this.state = {
