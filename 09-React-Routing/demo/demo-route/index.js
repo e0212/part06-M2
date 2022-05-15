@@ -45,24 +45,34 @@ const Root = (
       <Route path="/home">
         <Home />
       </Route>
+
+
       <Route exact path="/exact">
         <h2>Exact</h2>
       </Route>
       {/* <Route path="/exact/another">
         <h2>Another</h2>
       </Route> */}
+
+
       <Route path="/exact">
         <h2>Not Exact</h2>
       </Route>
       {/* <Route path="/nostrict/">
         <h2>Not Strict</h2>
       </Route> */}
+
+
       <Route path="/nostrict">
         <h2>Not Strict</h2>
       </Route>
+
+
       <Route strict path="/strict/">
         <h2>Strict</h2>
       </Route>
+
+
       {/* <Route strict path="/strict">
         <h2>Strict</h2>
       </Route> */}
@@ -75,9 +85,13 @@ const Root = (
       <Route sensitive path="/Sensitive">
         <h2>Sensitive Mayus</h2>
       </Route> */}
+
+
       <Route path="/sensitive">
         <h2>No Sensitive</h2>
       </Route>
+
+
       <Route path="/">
         <h2>Default</h2>
       </Route>
