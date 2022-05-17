@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+// EL PROBLEMA ES QUE SI NO USAMOS KEYS REACT NO SABE DISTINGUIR
+
 function Ejemplo({lang}) {
   if (lang === 'hun') {
     return (
@@ -24,6 +26,6 @@ export default function Lang() {
 
   return <div>
     <Ejemplo lang={lang} />
-    <button onClick={(e) => setLang((old) => setLang(old == 'hun' ? 'es' : 'hun'))}>Lang</button>
+    <button onClick={(e) => setLang((old) => setLang(old === 'hun' ? 'es' : 'hun'))}>Lang</button>
      </div>
 }

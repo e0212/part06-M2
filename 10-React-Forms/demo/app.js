@@ -5,7 +5,12 @@ import Uncontrolled from './src/components/Uncontrolled.jsx';
 import Ejemplo from './src/components/Ejemplo.jsx';
 import DynamicInputs from './src/components/DynamicInputs.jsx';
 
-render(<div>
-    <h2>Ejemplo</h2>
-    <Ejemplo lang='hun'/>
-  </div>, document.getElementById('app'));
+render(
+  <div>
+    {/*<h2>Ejemplo</h2>
+    <Ejemplo lang='hun'/>*/}
+   
+
+    <DynamicInputs/>       {/*aca usamos Uncontrolled, Form, Controlled...etc, para probar/>  */}
+  </div>, 
+  document.getElementById('app'));
